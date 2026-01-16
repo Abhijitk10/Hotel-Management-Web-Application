@@ -134,14 +134,6 @@ HotelBookingApplication/
 
 ---
 
-## ✅ Future Enhancements
-
-* Online payment gateway integration
-* Advanced room filtering and search
-* Email notification system
-* Booking cancellation and refund flow
-
----
 
 ## 👨‍💻 Author
 
