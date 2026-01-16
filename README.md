@@ -138,7 +138,7 @@ HotelBookingApplication/
 ## 👨‍💻 Group Members
 
 **Abhijit Khemkar**
-**Isha Koralli**
+/**Isha Koralli**
 
 
 ---
