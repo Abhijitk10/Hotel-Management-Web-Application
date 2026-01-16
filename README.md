@@ -1,21 +1,153 @@
-🏨 Hotel Booking ApplicationA full-stack hotel management system built with Spring Boot, React, and MySQL. This application allows users to browse rooms, check availability, and book stays, while providing an administrative interface for managing room inventory and viewing all bookings.🚀 FeaturesFor GuestsRoom Browsing: View available rooms with high-quality photos, types, and prices.Booking System: Book rooms by selecting dates and providing guest details.Instant Confirmation: Receive a unique 8-character confirmation code for every successful booking.Booking History: View existing bookings using a guest email address.For AdministratorsRoom Management: Add, edit, and delete rooms.Booking Oversight: View a comprehensive list of all reservations made in the system.Photo Management: Upload and update room images directly from the dashboard.🛠️ Tech StackBackendJava 17+Spring Boot 3.xSpring Data JPA (Hibernate)Spring Security (Role-based access control)Lombok (Boilerplate reduction)MySQL (Relational Database)FrontendReact.jsAxios (API communication)Bootstrap (Styling)⚙️ Setup & Installation1. PrerequisitesInstall JDK 17 or higher.Install Node.js and npm.Install MySQL Server.2. Database ConfigurationCreate a database named hotel_db and run the following configuration to handle the booking logic correctly:SQLCREATE DATABASE hotel_db;
+# 🏨 Hotel Booking Application
 
--- Use this to ensure compatibility with the application logic
+A full-stack **Hotel Management & Booking System** built using **Spring Boot**, **React**, and **MySQL**. This application enables users to browse hotel rooms, check availability, and book stays, while providing administrators with powerful tools to manage rooms and monitor reservations.
+
+---
+
+## 🚀 Features
+
+### 👤 For Guests
+
+* **Room Browsing** – View available rooms with high-quality photos, room types, and pricing details.
+* **Booking System** – Book rooms by selecting check-in/check-out dates and entering guest information.
+* **Instant Confirmation** – Receive a unique **8-character confirmation code** upon successful booking.
+* **Booking History** – Retrieve existing bookings using the guest’s email address.
+
+### 🛠️ For Administrators
+
+* **Room Management** – Add, edit, and delete room details.
+* **Booking Oversight** – View all reservations made in the system.
+* **Photo Management** – Upload and update room images directly from the admin dashboard.
+
+---
+
+## 🧰 Tech Stack
+
+### 🔙 Backend
+
+* Java 17+
+* Spring Boot 3.x
+* Spring Data JPA (Hibernate)
+* Spring Security (Role-Based Access Control)
+* Lombok (Boilerplate Code Reduction)
+* MySQL (Relational Database)
+
+### 🔜 Frontend
+
+* React.js
+* Axios (API Communication)
+* Bootstrap (UI Styling)
+
+---
+
+## ⚙️ Setup & Installation
+
+### 1️⃣ Prerequisites
+
+Ensure the following are installed on your system:
+
+* JDK 17 or higher
+* Node.js and npm
+* MySQL Server
+
+---
+
+### 2️⃣ Database Configuration
+
+Create a database named `hotel_db` and execute the following SQL commands:
+
+```sql
+CREATE DATABASE hotel_db;
+
+-- Ensure compatibility with booking logic
 ALTER TABLE room MODIFY COLUMN is_booked TINYINT(1) DEFAULT 0;
 ALTER TABLE booked_room MODIFY COLUMN confirmation_code VARCHAR(255);
-3. Backend SetupNavigate to the backend folder.Open src/main/resources/application.properties.Update your MySQL credentials:Propertiesspring.datasource.url=jdbc:mysql://localhost:3306/hotel_db
+```
+
+---
+
+### 3️⃣ Backend Setup
+
+1. Navigate to the **backend** directory.
+2. Open the file:
+
+   ```
+   src/main/resources/application.properties
+   ```
+3. Update your MySQL credentials:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/hotel_db
 spring.datasource.username=YOUR_USERNAME
 spring.datasource.password=YOUR_PASSWORD
-Run the application using your IDE or via command line:Bash./mvnw spring-boot:run
-4. Frontend SetupNavigate to the frontend folder.Install dependencies:Bashnpm install
-Start the development server:Bashnpm start
-📂 Project StructurePlaintextHotelBookingApplication/
+```
+
+4. Run the Spring Boot application:
+
+```bash
+./mvnw spring-boot:run
+```
+
+---
+
+### 4️⃣ Frontend Setup
+
+1. Navigate to the **frontend** directory.
+2. Install required dependencies:
+
+```bash
+npm install
+```
+
+3. Start the React development server:
+
+```bash
+npm start
+```
+
+---
+
+## 📂 Project Structure
+
+```
+HotelBookingApplication/
 ├── src/main/java/com/avin/HotelBookingApplication/
-│   ├── controller/      # REST Endpoints
+│   ├── controller/      # REST Controllers
 │   ├── model/           # JPA Entities (Room, BookedRoom)
 │   ├── repository/      # Data Access Layer
-│   ├── response/        # DTOs for clean API responses
+│   ├── response/        # DTOs for API Responses
 │   └── service/         # Business Logic
 └── src/main/resources/
     └── application.properties
-🛡️ API EndpointsMethodEndpointDescriptionAccessPOST/rooms/add/new-roomAdd a new room with photoAdminGET/rooms/all-roomsFetch all roomsPublicPOST/bookings/room/{id}/bookingCreate a new reservationPublicGET/bookings/all-bookingsView all hotel bookingsAdmin
+```
+
+---
+
+## 🔐 API Endpoints
+
+| Method | Endpoint                      | Description               | Access |
+| ------ | ----------------------------- | ------------------------- | ------ |
+| POST   | `/rooms/add/new-room`         | Add a new room with photo | Admin  |
+| GET    | `/rooms/all-rooms`            | Fetch all rooms           | Public |
+| POST   | `/bookings/room/{id}/booking` | Create a new reservation  | Public |
+| GET    | `/bookings/all-bookings`      | View all hotel bookings   | Admin  |
+
+---
+
+## ✅ Future Enhancements
+
+* Online payment gateway integration
+* Advanced room filtering and search
+* Email notification system
+* Booking cancellation and refund flow
+
+---
+
+## 👨‍💻 Author
+
+**Abhijit Dattatray Khemkar**
+B.Tech in Electrical Engineering | Aspiring Java Full Stack Developer
+
+---
+
+⭐ If you find this project helpful, feel free to star the repository!
