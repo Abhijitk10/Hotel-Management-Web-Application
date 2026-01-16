@@ -135,7 +135,7 @@ HotelBookingApplication/
 ---
 
 
-## 👨‍💻 Author
+## 👨‍💻 Group Members
 
 **Abhijit Khemkar**
 **Isha Koralli**
@@ -143,4 +143,3 @@ HotelBookingApplication/
 
 ---
 
-⭐ If you find this project helpful, feel free to star the repository!
