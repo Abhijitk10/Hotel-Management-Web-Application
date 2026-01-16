@@ -145,8 +145,9 @@ HotelBookingApplication/
 
 ## 👨‍💻 Author
 
-**Abhijit Dattatray Khemkar**
-B.Tech in Electrical Engineering | Aspiring Java Full Stack Developer
+**Abhijit Khemkar**
+**Isha Koralli**
+
 
 ---
 
